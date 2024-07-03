@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	 <groups>
+    <run>
+      <include name="group1"/>
+    </run>
+  </groups>
+	<listeners>
+		<listener class-name="AutoBots.Resourses.Listerners"></listener>
+	</listeners>
+	<test thread-count="5" name="Test">
+		
+		<classes>
+
+			<class name="AutoBots.BuildFramwork.LoginPageValidation">
+		<!--Test 		<methods>
+					<include name="ValidationsOfLoginPageUrl"></include>
+					<include name="ValidCredentials"></include>
+					<include name="ValidationOfSiginButtonText"></include>
+				</methods> -->
+	</class> 
+
+			<class name="AutoBots.BuildFramwork.HomePageValidation">
+				<methods>
+					<include name="ValidationOfHomePageLogo"></include>
+					<include name="ValidationOfHomeButtonsText"></include>
+					<include name="ValidationOfGreenKartTextAndButton"></include>
+				</methods>
+			</class>
+
+			<class name="AutoBots.BuildFramwork.ItemsPageValidation">
+				<methods>
+					<include name="ValidationOfItemsPageLogo"></include>
+					<include name="ValidationofSearchBox"></include>
+					<include name="ValidationOfTitleKart"></include>
+					<include name="FlowOfItemsPage"></include>
+					<include name="ValidationOfTitleGreen"></include>
+				</methods>
+			</class>
+
+
+			<class name="AutoBots.BuildFramwork.ChcekOutPageValidatio">
+				<methods>
+					<include name="ValidationOfSelectedItems"></include>
+					<include name="ValidationOfApplyPromoCode"></include>
+					<include name="PlaceOrderButton"></include>
+					<include name="ValidationOfSuccesfullyPlacedText"></include>
+					<include name="FlowOfCheckoutPage"></include>
+				</methods>
+			</class>
+
+			<class name="AutoBots.BuildFramwork.OrdersPageValidation">
+				<methods>
+					<include name="ValidationOfItemsInOrderPage"></include>
+					<include name="CompleteFlow"></include>
+				</methods>
+			</class>
+		</classes>
+	</test> <!--Test -->
+</suite> <!--Suite -->
